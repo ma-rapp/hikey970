@@ -18,4 +18,4 @@ clean:
 		rm -rf $$PROJECT/native $$PROJECT/hikey; \
 	done
 
-.PHONY: all clean download_hikey download_hikey2 download_hikey3
+.PHONY: all clean
