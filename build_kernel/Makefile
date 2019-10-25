@@ -22,7 +22,7 @@ $(BOOTLOADER)/.stamp_patches: $(BOOTLOADER)/l-loader.diff
 	patch -p1 -d $(BOOTLOADER)/l-loader < $(BOOTLOADER)/l-loader.diff
 	touch $@
 
-bootloader: $(BOOTLOADER)/edk2/OpenPlatformPkg $(BOOTLOADER)/.stamp_patches $(TOOLCHAIN)/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu
+bootloader: $(BOOTLOADER)/edk2/OpenPlatformPkg $(BOOTLOADER)/.stamp_patches $(TOOLCHAIN)/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/.stamp_extracted
 	rm -f $(BOOTLOADER)/.stamp_build
 	cd $(BOOTLOADER) && l-loader/build_uefi.sh hikey970
 	touch $(BOOTLOADER)/.stamp_build
