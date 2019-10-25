@@ -2,9 +2,9 @@
 
 A collection of tools and utilities for the HiKey 970 board (https://www.96boards.org/product/hikey970).
 
-## Build AOSP
+## Build Android Image
 
-The Makefile in `build_kernel` can be used to build AOSP. The kernel is built from sources and combined with a pre-built AOSP into an image that can be flashed onto the HiKey 970 board.
+The Makefile in `build_kernel` can be used to build an Android image. The kernel is built from sources and combined with a pre-built AOSP into an image that can be flashed onto the HiKey 970 board.
 
 Install dependencies
 
