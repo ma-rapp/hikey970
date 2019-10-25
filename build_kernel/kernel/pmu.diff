@@ -1,0 +1,47 @@
+diff --git a/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dts b/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dts
+index 3a7937344ee7..f60cc48b8b2f 100755
+--- a/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dts
++++ b/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dts
+@@ -131,11 +131,39 @@
+ 		uart6: serial@fff32000 {
+ 			status = "okay";
+ 		};
++
++		/*pmu {
++			compatible = "arm,armv8-pmuv3";
++			interrupts = <0 60 4>,
++			             <0 61 4>,
++			             <0 62 4>,
++			             <0 63 4>;
++		};*/
+ 	};
+ 
+-		hifidsp {
+-				compatible = "hisilicon,k3hifidsp";
+-		};
++	pmu {
++		compatible = "arm,armv8-pmuv3";
++		interrupts = <0 24 4>,
++		             <0 25 4>,
++		             <0 26 4>,
++		             <0 27 4>,
++		             <0 2 4>,
++		             <0 3 4>,
++		             <0 4 4>,
++		             <0 5 4>;
++		interrupt-affinity = <&cpu0>,
++		                     <&cpu1>,
++		                     <&cpu2>,
++		                     <&cpu3>,
++		                     <&cpu4>,
++		                     <&cpu5>,
++		                     <&cpu6>,
++		                     <&cpu7>;
++	};
++
++	hifidsp {
++		compatible = "hisilicon,k3hifidsp";
++	};
+ 
+ 	leds {
+ 		compatible = "gpio-leds";

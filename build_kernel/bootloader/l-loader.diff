@@ -1,0 +1,13 @@
+diff --git a/build_uefi.sh b/build_uefi.sh
+index 3449246..35716bf 100755
+--- a/build_uefi.sh
++++ b/build_uefi.sh
+@@ -43,7 +43,7 @@ case "${SELECT_GCC}" in
+ 	CROSS_COMPILE=aarch64-linux-gnu-
+ 	;;
+ "LINARO_GCC_7_1")
+-	AARCH64_GCC_7_1=/opt/toolchain/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/
++	AARCH64_GCC_7_1=$(realpath `dirname "$0"`/../../toolchain/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/)
+ 	PATH=${AARCH64_GCC_7_1}:${PATH} && export PATH
+ 	export AARCH64_TOOLCHAIN=GCC5
+ 	CROSS_COMPILE=aarch64-linux-gnu-

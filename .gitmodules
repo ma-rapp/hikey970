@@ -1,0 +1,33 @@
+[submodule "build_kernel/toolchain/aarch64-linux-android-4.9"]
+	path = build_kernel/toolchain/aarch64-linux-android-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
+[submodule "build_kernel/bootloader/tools-images-hikey970"]
+	path = build_kernel/bootloader/tools-images-hikey970
+	url = https://github.com/96boards-hikey/tools-images-hikey970.git
+[submodule "build_kernel/bootloader/OpenPlatformPkg"]
+	path = build_kernel/bootloader/OpenPlatformPkg
+	url = https://github.com/96boards-hikey/OpenPlatformPkg.git
+	branch = hikey970-v4.9
+[submodule "build_kernel/bootloader/arm-trusted-firmware"]
+	path = build_kernel/bootloader/arm-trusted-firmware
+	url = https://github.com/96boards-hikey/arm-trusted-firmware.git
+	branch = hikey970-v4.9
+[submodule "build_kernel/bootloader/l-loader"]
+	path = build_kernel/bootloader/l-loader
+	url = https://github.com/96boards-hikey/l-loader.git
+	branch = hikey970-v4.9
+	ignore = dirty
+[submodule "build_kernel/bootloader/uefi-tools"]
+	path = build_kernel/bootloader/uefi-tools
+	url = https://github.com/96boards-hikey/uefi-tools.git
+	branch = hikey970-v4.9
+[submodule "build_kernel/bootloader/edk2"]
+	path = build_kernel/bootloader/edk2
+	url = https://github.com/96boards-hikey/edk2.git
+	branch = hikey970-v4.9
+	ignore = dirty
+[submodule "build_kernel/kernel/linux"]
+	path = build_kernel/kernel/linux
+	url = https://github.com/96boards-hikey/linux.git
+	branch = hikey970-v4.9
+	ignore = dirty
