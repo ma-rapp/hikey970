@@ -1,0 +1,88 @@
+diff --git a/pkgs/apps/x264/parsec/hikey-pthreads.bldconf b/pkgs/apps/x264/parsec/hikey-pthreads.bldconf
+new file mode 100644
+index 00000000..8f67e23e
+--- /dev/null
++++ b/pkgs/apps/x264/parsec/hikey-pthreads.bldconf
+@@ -0,0 +1,40 @@
++#!/bin/bash
++#
++# gcc-pthreads.bldconf - file containing information necessary to build a
++#                        specific program of the PARSEC benchmark suite with
++#                        gcc and pthreads
++#
++# Copyright (C) 2007-2008 Princeton University
++# Written by Christian Bienia
++
++# Compilation and linking options.
++# This is the configuration we'll use to build the program. Each package of the
++# benchmark suite has such a file with information that will be added to the
++# global configuration. All variables set in the global configuration files can
++# be referenced here.
++
++
++# Package dependencies
++
++case `arch` in
++    i*86|x86_64)
++	build_deps=""  # No yasm for cross-compiling
++    ;;
++    
++    *)
++	build_deps=""
++    ;;
++esac
++
++# Environment to use for configure script and Makefile
++build_env="PATH=\"${PARSECDIR}/pkgs/tools/yasm/inst/${PARSECPLAT}/bin:${PATH}\""
++
++# Whether the build system supports only in-place compilation.
++# If TRUE, then all sources will be copied to the build directory before we
++# start building the package. Required for older build systems which don't
++# support VPATH.
++build_inplace="TRUE"
++
++# Arguments to pass to the configure script, if it exists
++build_conf="--enable-pthread --extra-asflags=\"${ASFLAGS}\" --extra-cflags=\"${CFLAGS}\" --extra-ldflags=\"${LDFLAGS} ${LIBS}\" --build=x86_64-linux-gnu --host=aarch64-linux-gnu"
++
+diff --git a/pkgs/apps/x264/parsec/hikey.bldconf b/pkgs/apps/x264/parsec/hikey.bldconf
+new file mode 100644
+index 00000000..b6f62a4e
+--- /dev/null
++++ b/pkgs/apps/x264/parsec/hikey.bldconf
+@@ -0,0 +1,7 @@
++#!/bin/bash
++
++# gcc.bldconf - configuration file for PARSEC
++
++# Default parallelization is pthreads
++source ${PARSECDIR}/pkgs/apps/x264/parsec/hikey-pthreads.bldconf
++
+diff --git a/pkgs/apps/x264/src/config.sub b/pkgs/apps/x264/src/config.sub
+index 5defff65..be3d7a22 100755
+--- a/pkgs/apps/x264/src/config.sub
++++ b/pkgs/apps/x264/src/config.sub
+@@ -317,7 +317,7 @@ case $basic_machine in
+ 	| alpha-* | alphaev[4-8]-* | alphaev56-* | alphaev6[78]-* \
+ 	| alpha64-* | alpha64ev[4-8]-* | alpha64ev56-* | alpha64ev6[78]-* \
+ 	| alphapca5[67]-* | alpha64pca5[67]-* | arc-* \
+-	| arm-*  | armbe-* | armle-* | armeb-* | armv*-* \
++	| arm-*  | armbe-* | armle-* | armeb-* | armv*-* | aarch64 \
+ 	| avr-* | avr32-* \
+ 	| bfin-* | bs2000-* \
+ 	| c[123]* | c30-* | [cjt]90-* | c4x-* | c54x-* | c55x-* | c6x-* \
+diff --git a/pkgs/apps/x264/src/configure b/pkgs/apps/x264/src/configure
+index 6bdfe6dd..a3dbbea8 100755
+--- a/pkgs/apps/x264/src/configure
++++ b/pkgs/apps/x264/src/configure
+@@ -220,6 +220,11 @@ case $host_os in
+     CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
+     LDFLAGS="$LDFLAGS -lm"
+     ;;
++  gnu*)
++    SYS="LINUX"
++    CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
++    LDFLAGS="$LDFLAGS -lm"
++    ;;
+   cygwin*)
+     SYS="MINGW"
+     CFLAGS="$CFLAGS -mno-cygwin"

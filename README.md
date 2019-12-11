@@ -22,6 +22,16 @@ $ make all
 
 The images are created in the `out` folder.
 
+## Build Benchmarks
+
+The Makefile in `benchmarks` can be used to build the benchmarks.
+At the moment, only PARSEC is included for Hikey 970.
+
+```
+$ cd benchmarks
+$ make all
+```
+
 ## TODO
 
 * documentation
