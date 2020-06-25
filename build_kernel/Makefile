@@ -97,7 +97,7 @@ out/ramdisk.img: out/ramdisk/ramdisk.new.cpio.gz
 	cp $< $@
 
 out/boot.img: out/Image-dtb out/ramdisk.img
-	mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=$(SERIALNO) clk_ignore_unused=true" -o out/boot1.img
+	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=$(SERIALNO) clk_ignore_unused=true" -o out/boot1.img
 
 out/cache.img: $(ANDROID_IMG)/cache.img
 	cp $< $@

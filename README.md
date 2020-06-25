@@ -15,6 +15,7 @@ $ sudo apt install git-core gnupg flex bison gperf build-essential zip curl zlib
 To build it:
 
 ```
+$ git submodule update --init
 $ cd build_kernel
 $ make bootloader
 $ make all
