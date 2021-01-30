@@ -1,4 +1,5 @@
-PROJECTS = perfcounters global_perfcounters temperature cci_perfcounters
+#PROJECTS = perfcounters perfcounters_csv global_perfcounters temperature cci_perfcounters
+PROJECTS = perfcounters_csv
 MODULES = cci_pmu
 SHELL := /bin/bash
 
@@ -6,7 +7,7 @@ all:
 	$(foreach p,$(PROJECTS), mkdir -p $(p)/native $(p)/hikey || exit;)
 	$(foreach p,$(PROJECTS), cd $(CURDIR)/$(p)/native && cmake .. && make|| exit;)
 	$(foreach p,$(PROJECTS), cd $(CURDIR)/$(p)/hikey && cmake .. -DCMAKE_TOOLCHAIN_FILE=../../toolchain_hikey.cmake && make || exit;)
-	$(foreach m,$(MODULES), make -C $(CURDIR)/modules/$(m);)
+#	$(foreach m,$(MODULES), make -C $(CURDIR)/modules/$(m);)
 #	for PROJECT in $(PROJECTS) ; do \
 #		mkdir -p $$PROJECT/native $$PROJECT/hikey && \
 #		cd $(CURDIR)/$$PROJECT/native && cmake .. && make && \
