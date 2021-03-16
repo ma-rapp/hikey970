@@ -1,0 +1,3 @@
+/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/rebuild_cache.dir
+/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/perfcounters_csv.dir
+/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/edit_cache.dir

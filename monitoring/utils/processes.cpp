@@ -208,3 +208,53 @@ void observe(int pid, std::function<void(int tid)> threadStarted, std::function<
         }
     }
 }
+void observe(int pid, bool instruction_stopper, std::function<void(int tid)> threadStarted, std::function<void(int tid)> threadEnded, std::function<bool(void)> periodicCallback, long waitPeriod)
+{
+    std::vector<int> threadIds;
+    bool to_be_continued;
+    while (true)
+    {
+        std::vector<int> tids = getThreads(pid);
+
+        for (unsigned int i = 0; i < threadIds.size(); i++)
+        {
+            if (std::find(tids.begin(), tids.end(), threadIds.at(i)) == tids.end())
+            {
+                // remove finished threads
+                std::cout << currentDateTime() << "thread " << threadIds.at(i) << " finished" << std::endl;
+                threadEnded(threadIds.at(i));
+                threadIds.erase(threadIds.begin() + i);
+            }
+        }
+        for (const int& tid : tids)
+        {
+            if (std::find(threadIds.begin(), threadIds.end(), tid) == threadIds.end())
+            {
+                // migrate new task
+                std::cout << currentDateTime() << "thread " << tid << " spawned" << std::endl;
+                threadStarted(tid);
+                threadIds.push_back(tid);
+            }
+        }
+
+        if (threadIds.size() == 0)
+        {
+            std::cout << currentDateTime() << "last thread finished" << std::endl;
+            return;
+        }
+
+        if (periodicCallback != NULL)
+        {
+            to_be_continued = periodicCallback();
+            if(!to_be_continued)
+            {
+                std::cout << currentDateTime() << "reached 5,000,000,000 instructions - finishing..." << std::endl;
+                return;
+            }
+        }
+        if (waitPeriod > 0)
+        {
+            usleep(waitPeriod);
+        }
+    }
+}

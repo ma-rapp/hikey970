@@ -5,6 +5,11 @@
 #include <memory>
 #include <chrono>
 #include <fstream>
+#include <map>
+#include <fcntl.h>
+#include <sstream>
+#include <regex>
+#include <iomanip>
 
 #include "console.h"
 #include "perf.h"
@@ -12,23 +17,41 @@
 
 
 std::ofstream csv_file;
+std::string one_hot_cpu_vector;
+std::map<std::string, long long> counterSumOverThreads;
+int startTime;
+long long totalInstructions;
+
+const int NUM_CPU_STATES = 10;
+typedef struct CPUData
+{
+    std::string cpu;
+    size_t times[NUM_CPU_STATES];
+} CPUData;
 
 class PerfManager
 {
 public:
-    PerfManager(int pid, std::vector<std::string> counterNames, unsigned int epochMs) : pid(pid), counterNames(counterNames), epoch(epochMs) {}
+    PerfManager(std::string benchmark, int cpu, std::vector<std::string> counterNames, unsigned int epochMs) : benchmark(benchmark), cpu(cpu), counterNames(counterNames), epoch(epochMs) {}
     void run()
     {
+        startTime = currentDateTimeMilliseconds();
+
+        // first wait for benchmark to start
+        int pid = findBenchmark(benchmark);
         nextUpdate = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()) + epoch;
+        readStatsCPU(lastCPUData);
+
         observe(
             pid,
+            true,
             std::bind(&PerfManager::threadStarted, this, std::placeholders::_1),
             std::bind(&PerfManager::threadEnded, this, std::placeholders::_1),
             std::bind(&PerfManager::periodic, this),
             0 // waitPeriod
         );
 
-        std::string nowText = currentDateTime();
+        std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
         std::cout << nowText << "----------------------------" << std::endl;
         std::cout << nowText << "total values" << std::endl;
         for (const std::shared_ptr<PerfCounter>& counter : threadPerfCounters)
@@ -42,16 +65,10 @@ private:
     {
         for (const std::string& name : counterNames)
         {
-            int cpu = -1; // all CPUs
             std::shared_ptr<PerfCounter> counter = std::make_shared<PerfCounter>(tid, cpu, name);
             counter->setUp();
             threadPerfCounters.push_back(counter);
         }
-        for (const std::shared_ptr<PerfCounter>& counter : threadPerfCounters)
-        {
-            csv_file << counter->getName() << ',';
-        }
-        csv_file << '\n';
     }
 
     void threadEnded(int tid)
@@ -64,10 +81,10 @@ private:
             }
         }
     }
-
-    void periodic()
+    bool periodic()
     {
-        std::string nowText = currentDateTime();
+        bool retVal = true;
+        std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
 
         // wait for 1 second
         std::chrono::milliseconds now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
@@ -75,14 +92,19 @@ private:
         nextUpdate += epoch;
         if (untilNextUpdate.count() > 0)
         {
-            std::cout << nowText << "sleep for " << untilNextUpdate.count() << " ms" << std::endl;
+            std::cout << nowText << " sleep for " << untilNextUpdate.count() << " ms" << std::endl;
             usleep(untilNextUpdate.count() * 1000);
         }
         else
         {
             std::cout << nowText << "late" << std::endl;
         }
-        
+        // time, temperature,
+        csv_file << nowText << ",";
+        csv_file << std::to_string(getCurrentTemperature()) << ",";
+        csv_file << one_hot_cpu_vector << ",";
+        csv_file << getCurrentUtilization();
+
 
         for (unsigned int i = 0; i < threadPerfCounters.size(); i++)
         {
@@ -100,41 +122,219 @@ private:
             long long value = counter->getCounterValue();
             if (counter->isActive())
             {
-                std::cout << nowText << "tid " << counter->getThreadId() << " " << counter->getName() << ": " << (value - lastValue) << std::endl;
-                csv_file << (value - lastValue) << ',';
+                //std::cout << nowText << " cpu(" << counter->getCPUId()  << ") tid(" << counter->getThreadId() << ") " << counter->getName() << ": " << (value - lastValue) << std::endl;
+                counterSumOverThreads[std::to_string(counter->getCPUId()) + counter->getName()] += (value - lastValue);
+                if(counter->getName() == "INST_RETIRED")
+                {
+                    totalInstructions += (value - lastValue);
+                    if(totalInstructions >= 5000000000)
+                    {
+                        retVal = false;
+                    }
+                }
             }
             lastValues.at(i) = value;
         }
-        csv_file << '\n';
+
+        // set csv vals and reset counter
+        for(const std::string& name : counterNames)
+        {
+            std::cout << std::to_string(cpu) + name << " : " << counterSumOverThreads[std::to_string(cpu) + name] << std::endl;
+            csv_file << counterSumOverThreads[std::to_string(cpu) + name] << ",";
+            counterSumOverThreads[std::to_string(cpu) + name] = 0;
+        }
+        std::cout << "totalInstructions: " << std::to_string(totalInstructions) << std::endl;
+        csv_file << "\n";
+        std::cout << "-------------------------------------------------" << std::endl;
+        return retVal;
     }
 
-    int pid;
+    int getCurrentFrequency(int cpu_num)
+    {
+        std::string path = std::string("/sys/devices/system/cpu/cpu") + std::to_string(cpu_num) + std::string("/cpufreq/cpuinfo_cur_freq");
+        int fd = open(path.c_str(), O_RDONLY);
+
+        char freq[128];
+        size_t r = pread(fd, freq, 128, 0);
+        if (r <= 0)
+        {
+            std::cout << "read weird number of bytes: " << r << std::endl;
+            exit(1);
+        }
+
+        return atoi(freq);
+    }
+
+    int getCurrentTemperature()
+    {
+        // 1st approach
+        int fd = open("/sys/class/thermal/thermal_zone0/temp", O_RDONLY);
+
+        char t[128];
+        size_t r = pread(fd, t, 128, 0);
+        if (r <= 0)
+        {
+            std::cout << "read weird number of bytes: " << r << std::endl;
+            exit(1);
+        }
+        return atoi(t);
+        /*
+        // 2nd approach
+        char temp[4];
+        memcpy(temp, (const void*)0xf7030700, 4);
+        int t = atoi(temp);
+
+        std::cout << std::to_string(t) << std::endl;
+        return t;
+        */
+    }
+
+    void readStatsCPU(std::vector<CPUData> & entries)
+    {
+        std::ifstream fileStat("/proc/stat");
+
+        std::string line;
+
+        const std::string STR_CPU("cpu");
+        const std::size_t LEN_STR_CPU = STR_CPU.size();
+
+        while(std::getline(fileStat, line))
+        {
+            // cpu stats line found
+            if(!line.compare(0, LEN_STR_CPU, STR_CPU))
+            {
+                std::istringstream ss(line);
+
+                // store entry
+                entries.emplace_back(CPUData());
+                CPUData & entry = entries.back();
+
+                // read cpu label
+                ss >> entry.cpu;
+
+                if(entry.cpu.size() > LEN_STR_CPU)
+                    entry.cpu.erase(0, LEN_STR_CPU);
+                else
+                {
+                    entries.pop_back();
+                    continue;
+                    //entry.cpu = "total";
+                }
+
+                // read times
+                for(int i = 0; i < NUM_CPU_STATES; ++i)
+                    ss >> entry.times[i];
+            }
+        }
+    }
+
+    std::string getCurrentUtilization()
+    {
+        std::string utilvector = "";
+        std::vector<CPUData> newCPUData;
+        readStatsCPU(newCPUData);
+        const size_t num_entries = newCPUData.size();
+        for(size_t i = 0; i < num_entries; i++)
+        {
+            const CPUData & e1 = lastCPUData[i];
+            const CPUData & e2 = newCPUData[i];
+            size_t last_idle = e1.times[3] + e1.times[4];
+            size_t last_active = e1.times[0] + e1.times[1] + e1.times[2] + e1.times[5] + 
+            e1.times[6] + e1.times[7] + e1.times[8] + e1.times[9];
+
+            size_t new_idle = e2.times[3] + e2.times[4];
+            size_t new_active = e2.times[0] + e2.times[1] + e2.times[2] + e2.times[5] + 
+            e2.times[6] + e2.times[7] + e2.times[8] + e2.times[9];
+
+            float active_time = last_active - new_active;
+            float idle_time = static_cast<float>(last_idle - new_idle);
+            float total_time = static_cast<float>(active_time + idle_time);
+            std::stringstream ss;
+            ss << std::fixed << std::setprecision(4) << (active_time/total_time);
+            utilvector += ss.str() + ",";
+        }
+        lastCPUData = newCPUData;
+        return utilvector;
+    }
+
+    std::string benchmark;
+    int cpu;
     std::vector<std::string> counterNames;
     std::chrono::milliseconds epoch;
     std::chrono::milliseconds nextUpdate;
     std::vector<std::shared_ptr<PerfCounter>> threadPerfCounters;
     std::vector<long long> lastValues;
+    std::vector<CPUData> lastCPUData;
 };
 
 int main(int argc, char **argv)
 {
-    if (argc < 2)
+    // ./percounters_csv <cpufreq> <benchmark> <cpu> <counter1> <counter2> ... <counterN>
+    if (argc < 3)
     {
-        std::cerr << "first argument must be benchmark name or '?'" << std::endl;
+        //std::cerr << "first argument must be benchmark name or '?'" << std::endl;
+        std::cerr << "call must be like ./perfcounters_csv <cpufreq> <benchmark> <cpu> <scenario> <counter1> <counter2> ... <counterN>";
         return 1;
     }
 
-    std::vector<std::string> counterNames;
-    for (int i = 2; i < argc; i++)
-    {
-        counterNames.push_back(argv[i]);
+    std::string cpufreq = argv[1];
+    std::string benchmark = argv[2];
+    int cpu = atoi(argv[3]);
+    switch(cpu){
+        case 1: 
+            cpu = 0;
+            one_hot_cpu_vector = "1,0,0,0,0,0,0,0";
+            break;
+        case 2: 
+            cpu = 1;
+            one_hot_cpu_vector = "0,1,0,0,0,0,0,0";
+            break;
+        case 4: 
+            cpu = 2;
+            one_hot_cpu_vector = "0,0,1,0,0,0,0,0";
+            break;
+        case 8: 
+            cpu = 3;
+            one_hot_cpu_vector = "0,0,0,1,0,0,0,0";
+            break;
+        case 10: 
+            cpu = 4;
+            one_hot_cpu_vector = "0,0,0,0,1,0,0,0";
+            break;
+        case 20: 
+            cpu = 5;
+            one_hot_cpu_vector = "0,0,0,0,0,1,0,0";
+            break;
+        case 40: 
+            cpu = 6;
+            one_hot_cpu_vector = "0,0,0,0,0,0,1,0";
+            break;
+        case 80: 
+            cpu = 7;
+            one_hot_cpu_vector = "0,0,0,0,0,0,0,1";
+            break;
+        default: std::cout << "error with cpu arg";
     }
+    std::string scenario_file = argv[4];
+    std::string scenario = std::regex_replace(scenario_file, std::regex("[^0-9]*([0-9]+).*"), std::string("$1"));
 
-    std::string benchmark = argv[1];
-    int pid = findBenchmark(benchmark);
 
-    PerfManager m(pid, counterNames, 1000);
-    csv_file.open("counterdata.csv");
+    std::string filename = "scenario" + scenario + "_benchmark-" + benchmark + "_core" + std::to_string(cpu) + "_frequency" + cpufreq + ".csv";
+    csv_file.open(filename);
+    csv_file << "time,temperature,";
+    csv_file << "curr_cpu0,curr_cpu1,curr_cpu2,curr_cpu3,curr_cpu4,curr_cpu5,curr_cpu6,curr_cpu7,";
+    csv_file << "core_util0,core_util1,core_util2,core_util3,core_util4,core_util5,core_util6,core_util7,";
+    std::vector<std::string> counterNames;
+    for (int i = 5; i < argc; i++)
+    {
+    	std::cout << "measuring " << argv[i] << std::endl;
+        counterNames.push_back(argv[i]);
+        csv_file << argv[i] << ",";
+        counterSumOverThreads[std::to_string(cpu) + argv[i]] = 0;
+    }
+    csv_file << '\n';
+
+    PerfManager m(benchmark, cpu, counterNames, 50);
     m.run();
     csv_file.close();
 
