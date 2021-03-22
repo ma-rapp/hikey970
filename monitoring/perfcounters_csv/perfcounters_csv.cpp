@@ -98,6 +98,7 @@ private:
         // time, temperature,
         csv_file << nowText << ",";
         csv_file << std::to_string(getCurrentTemperature()) << ",";
+        csv_file << std::to_string(getCurrentFrequency(cpu)) << ",";
         csv_file << one_hot_cpu_vector << ",";
         csv_file << getCurrentUtilization();
 
@@ -316,7 +317,7 @@ int main(int argc, char **argv)
 
     std::string filename = "scenario" + scenario + "_benchmark-" + benchmark + "_core" + std::to_string(cpu) + "_frequency" + cpufreq + ".csv";
     csv_file.open(filename);
-    csv_file << "time,temperature,";
+    csv_file << "time,temperature,f_gov,";
     csv_file << "curr_cpu0,curr_cpu1,curr_cpu2,curr_cpu3,curr_cpu4,curr_cpu5,curr_cpu6,curr_cpu7,";
     csv_file << "core_util0,core_util1,core_util2,core_util3,core_util4,core_util5,core_util6,core_util7,";
     std::vector<std::string> counterNames;
