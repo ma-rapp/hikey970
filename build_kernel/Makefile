@@ -6,7 +6,7 @@ ANDROID=$(shell pwd)/hikey970_android_8_images
 ANDROID_IMG=$(shell pwd)/hikey970_android_8_images/image
 SERIALNO=54DA9CD5022525E4
 
-all: out out/prm_ptable.img out/sec_xloader.img out/l-loader.bin out/fip.bin out/boot.img out/cache.img out/system.img out/userdata.img
+all: out out/prm_ptable.img out/sec_xloader.img out/l-loader.bin out/fip.bin out/boot1.img out/boot2.img out/boot3.img out/boot4.img out/cache.img out/system.img out/userdata.img
 
 $(TOOLCHAIN)/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz:
 	cd $(TOOLCHAIN) && wget https://releases.linaro.org/components/toolchain/binaries/7.1-2017.08/aarch64-linux-gnu/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
@@ -28,7 +28,8 @@ bootloader: $(BOOTLOADER)/edk2/OpenPlatformPkg $(BOOTLOADER)/.stamp_patches $(TO
 	touch $(BOOTLOADER)/.stamp_build
 
 $(ANDROID).zip:
-	wget http://hihope.org/hihope/downLoadCenter/testDownFile?filename=20190403/hikey970_android_8_images.rar -O $@
+	#wget http://hihope.org/hihope/downLoadCenter/testDownFile?filename=20190403/hikey970_android_8_images.rar -O $@
+	wget mirror.lemaker.org/hikey970_android_8_images.rar -O $@
 
 $(ANDROID)/.stamp_extracted: $(ANDROID).zip
 	unzip $< -d $(ANDROID)
@@ -96,8 +97,17 @@ out/ramdisk/ramdisk.new.cpio.gz: out/ramdisk/unpacked/init.rc out/ramdisk/.stamp
 out/ramdisk.img: out/ramdisk/ramdisk.new.cpio.gz
 	cp $< $@
 
-out/boot.img: out/Image-dtb out/ramdisk.img
-	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=$(SERIALNO) clk_ignore_unused=true" -o out/boot1.img
+out/boot1.img: out/Image-dtb out/ramdisk.img
+	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=54DA9CD5022525E4 clk_ignore_unused=true" -o out/boot1.img
+
+out/boot2.img: out/Image-dtb out/ramdisk.img
+	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=54DA9CD5022525E5 clk_ignore_unused=true" -o out/boot2.img
+
+out/boot3.img: out/Image-dtb out/ramdisk.img
+	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=54DA9CD5022525E6 clk_ignore_unused=true" -o out/boot3.img
+
+out/boot4.img: out/Image-dtb out/ramdisk.img
+	mkbootimg/mkbootimg.py --kernel out/Image-dtb --ramdisk out/ramdisk.img --cmdline "androidboot.hardware=hikey970 firmware_class.path=/system/etc/firmware loglevel=15 buildvariant=userdebug androidboot.selinux=permissive clk_ignore_unused=true initrd=0xBE19D000,0x16677F earlycon=pl011,0xfff32000,115200 console=ttyAMA6 androidboot.serialno=54DA9CD5022525E7 clk_ignore_unused=true" -o out/boot4.img
 
 out/cache.img: $(ANDROID_IMG)/cache.img
 	cp $< $@
@@ -108,12 +118,42 @@ out/system.img: $(ANDROID_IMG)/system.img
 out/userdata.img: $(ANDROID_IMG)/userdata.img
 	cp $< $@
 
-flashall:
+flashall1:
 	sudo fastboot flash ptable out/prm_ptable.img
 	sudo fastboot flash xloader out/sec_xloader.img
 	sudo fastboot flash fastboot out/l-loader.bin
 	sudo fastboot flash fip out/fip.bin
-	sudo fastboot flash boot out/boot.img
+	sudo fastboot flash boot out/boot1.img
+	sudo fastboot flash cache out/cache.img
+	sudo fastboot flash system out/system.img
+	sudo fastboot flash userdata out/userdata.img
+
+flashall2:
+	sudo fastboot flash ptable out/prm_ptable.img
+	sudo fastboot flash xloader out/sec_xloader.img
+	sudo fastboot flash fastboot out/l-loader.bin
+	sudo fastboot flash fip out/fip.bin
+	sudo fastboot flash boot out/boot2.img
+	sudo fastboot flash cache out/cache.img
+	sudo fastboot flash system out/system.img
+	sudo fastboot flash userdata out/userdata.img
+
+flashall3:
+	sudo fastboot flash ptable out/prm_ptable.img
+	sudo fastboot flash xloader out/sec_xloader.img
+	sudo fastboot flash fastboot out/l-loader.bin
+	sudo fastboot flash fip out/fip.bin
+	sudo fastboot flash boot out/boot3.img
+	sudo fastboot flash cache out/cache.img
+	sudo fastboot flash system out/system.img
+	sudo fastboot flash userdata out/userdata.img
+
+flashall4:
+	sudo fastboot flash ptable out/prm_ptable.img
+	sudo fastboot flash xloader out/sec_xloader.img
+	sudo fastboot flash fastboot out/l-loader.bin
+	sudo fastboot flash fip out/fip.bin
+	sudo fastboot flash boot out/boot4.img
 	sudo fastboot flash cache out/cache.img
 	sudo fastboot flash system out/system.img
 	sudo fastboot flash userdata out/userdata.img

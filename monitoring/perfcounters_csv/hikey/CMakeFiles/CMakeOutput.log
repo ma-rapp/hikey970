@@ -29,15 +29,15 @@ The CXX compiler identification is GNU, found in "/home/nikita/Documents/Work/hi
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_73ae8/fast"
+Run Build Command:"/usr/bin/make" "cmTC_b0f2e/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_73ae8.dir/build.make CMakeFiles/cmTC_73ae8.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_b0f2e.dir/build.make CMakeFiles/cmTC_b0f2e.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_73ae8.dir/testCCompiler.c.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_73ae8.dir/testCCompiler.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_73ae8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73ae8.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_73ae8.dir/testCCompiler.c.o  -o cmTC_73ae8 
+Building C object CMakeFiles/cmTC_b0f2e.dir/testCCompiler.c.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_b0f2e.dir/testCCompiler.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b0f2e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0f2e.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_b0f2e.dir/testCCompiler.c.o  -o cmTC_b0f2e 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -45,15 +45,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2aa15/fast"
+Run Build Command:"/usr/bin/make" "cmTC_4b0d2/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2aa15.dir/build.make CMakeFiles/cmTC_2aa15.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_4b0d2.dir/build.make CMakeFiles/cmTC_4b0d2.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_2aa15
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2aa15.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o  -o cmTC_2aa15 
+Building C object CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_4b0d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b0d2.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o  -o cmTC_4b0d2 
 Using built-in specs.
 COLLECT_GCC=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc
 COLLECT_LTO_WRAPPER=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper
@@ -63,9 +63,9 @@ Thread model: posix
 gcc version 7.1.1 20170707 (Linaro GCC 7.1-2017.08) 
 COMPILER_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/bin/
 LIBRARY_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2aa15' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
- /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuVCAFs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_2aa15 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2aa15' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4b0d2' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
+ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc33Gw8D.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_4b0d2 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4b0d2' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -74,15 +74,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2aa15/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4b0d2/fast"]
   ignore line: [make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2aa15.dir/build.make CMakeFiles/cmTC_2aa15.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_4b0d2.dir/build.make CMakeFiles/cmTC_4b0d2.dir/build]
   ignore line: [make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_2aa15]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2aa15.dir/link.txt --verbose=1]
-  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o  -o cmTC_2aa15 ]
+  ignore line: [Building C object CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc    -o CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_4b0d2]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b0d2.dir/link.txt --verbose=1]
+  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc     -v -rdynamic CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o  -o cmTC_4b0d2 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper]
@@ -92,13 +92,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.1.1 20170707 (Linaro GCC 7.1-2017.08) ]
   ignore line: [COMPILER_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2aa15' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuVCAFs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_2aa15 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4b0d2' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc33Gw8D.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_4b0d2 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o]
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccuVCAFs.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc33Gw8D.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [--fix-cortex-a53-835769] ==> ignore
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2aa15] ==> ignore
+    arg [cmTC_4b0d2] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib]
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib]
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib]
-    arg [CMakeFiles/cmTC_2aa15.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_4b0d2.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -156,15 +156,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9f973/fast"
+Run Build Command:"/usr/bin/make" "cmTC_6c203/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_9f973.dir/build.make CMakeFiles/cmTC_9f973.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_6c203.dir/build.make CMakeFiles/cmTC_6c203.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9f973.dir/feature_tests.c.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c11 -o CMakeFiles/cmTC_9f973.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9f973
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f973.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_9f973.dir/feature_tests.c.o  -o cmTC_9f973 
+Building C object CMakeFiles/cmTC_6c203.dir/feature_tests.c.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c11 -o CMakeFiles/cmTC_6c203.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6c203
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c203.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_6c203.dir/feature_tests.c.o  -o cmTC_6c203 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -178,15 +178,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5959a/fast"
+Run Build Command:"/usr/bin/make" "cmTC_ab7dd/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_5959a.dir/build.make CMakeFiles/cmTC_5959a.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_ab7dd.dir/build.make CMakeFiles/cmTC_ab7dd.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5959a.dir/feature_tests.c.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c99 -o CMakeFiles/cmTC_5959a.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
-Linking C executable cmTC_5959a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5959a.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_5959a.dir/feature_tests.c.o  -o cmTC_5959a 
+Building C object CMakeFiles/cmTC_ab7dd.dir/feature_tests.c.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c99 -o CMakeFiles/cmTC_ab7dd.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ab7dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab7dd.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_ab7dd.dir/feature_tests.c.o  -o cmTC_ab7dd 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -200,15 +200,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d76e5/fast"
+Run Build Command:"/usr/bin/make" "cmTC_184c4/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_d76e5.dir/build.make CMakeFiles/cmTC_d76e5.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_184c4.dir/build.make CMakeFiles/cmTC_184c4.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d76e5.dir/feature_tests.c.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c90 -o CMakeFiles/cmTC_d76e5.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d76e5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d76e5.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_d76e5.dir/feature_tests.c.o  -o cmTC_d76e5 
+Building C object CMakeFiles/cmTC_184c4.dir/feature_tests.c.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc   -std=c90 -o CMakeFiles/cmTC_184c4.dir/feature_tests.c.o   -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.c
+Linking C executable cmTC_184c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_184c4.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-gcc      -rdynamic CMakeFiles/cmTC_184c4.dir/feature_tests.c.o  -o cmTC_184c4 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -220,15 +220,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1887e/fast"
+Run Build Command:"/usr/bin/make" "cmTC_890f0/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_1887e.dir/build.make CMakeFiles/cmTC_1887e.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_890f0.dir/build.make CMakeFiles/cmTC_890f0.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1887e.dir/testCXXCompiler.cxx.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_1887e.dir/testCXXCompiler.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_1887e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1887e.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_1887e.dir/testCXXCompiler.cxx.o  -o cmTC_1887e 
+Building CXX object CMakeFiles/cmTC_890f0.dir/testCXXCompiler.cxx.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_890f0.dir/testCXXCompiler.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_890f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_890f0.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_890f0.dir/testCXXCompiler.cxx.o  -o cmTC_890f0 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -236,15 +236,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c9c19/fast"
+Run Build Command:"/usr/bin/make" "cmTC_e31cd/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_c9c19.dir/build.make CMakeFiles/cmTC_c9c19.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_e31cd.dir/build.make CMakeFiles/cmTC_e31cd.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c9c19
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9c19.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c9c19 
+Building CXX object CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_e31cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e31cd.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e31cd 
 Using built-in specs.
 COLLECT_GCC=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++
 COLLECT_LTO_WRAPPER=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper
@@ -254,9 +254,9 @@ Thread model: posix
 gcc version 7.1.1 20170707 (Linaro GCC 7.1-2017.08) 
 COMPILER_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/bin/
 LIBRARY_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c9c19' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
- /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccM4a6Is.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_c9c19 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c9c19' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e31cd' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
+ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMtXeuQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_e31cd /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e31cd' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64'
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -265,15 +265,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(aarch64-linux-gnu-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c9c19/fast"]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e31cd/fast"]
   ignore line: [make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c9c19.dir/build.make CMakeFiles/cmTC_c9c19.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e31cd.dir/build.make CMakeFiles/cmTC_e31cd.dir/build]
   ignore line: [make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c9c19]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9c19.dir/link.txt --verbose=1]
-  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c9c19 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++     -o CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_e31cd]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e31cd.dir/link.txt --verbose=1]
+  ignore line: [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++      -v -rdynamic CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e31cd ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper]
@@ -283,13 +283,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.1.1 20170707 (Linaro GCC 7.1-2017.08) ]
   ignore line: [COMPILER_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/bin/]
   ignore line: [LIBRARY_PATH=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib/:/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c9c19' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64']
-  link line: [ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccM4a6Is.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_c9c19 /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e31cd' '-shared-libgcc' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2 -plugin /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so -plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMtXeuQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-835769 --fix-cortex-a53-843419 -o cmTC_e31cd /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib/../lib64 -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib -L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtend.o /home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crtn.o]
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../libexec/gcc/aarch64-linux-gnu/7.1.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccM4a6Is.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccMtXeuQ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -307,7 +307,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-835769] ==> ignore
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c9c19] ==> ignore
+    arg [cmTC_e31cd] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crt1.o] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib/crti.o] ==> ignore
     arg [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/crtbegin.o] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.1.1/../../../../aarch64-linux-gnu/lib]
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/lib]
     arg [-L/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib] ==> dir [/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/lib]
-    arg [CMakeFiles/cmTC_c9c19.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_e31cd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -345,15 +345,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3e656/fast"
+Run Build Command:"/usr/bin/make" "cmTC_60a47/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_3e656.dir/build.make CMakeFiles/cmTC_3e656.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_60a47.dir/build.make CMakeFiles/cmTC_60a47.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3e656.dir/feature_tests.cxx.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++1z -o CMakeFiles/cmTC_3e656.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3e656
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e656.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_3e656.dir/feature_tests.cxx.o  -o cmTC_3e656 
+Building CXX object CMakeFiles/cmTC_60a47.dir/feature_tests.cxx.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++1z -o CMakeFiles/cmTC_60a47.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_60a47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60a47.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_60a47.dir/feature_tests.cxx.o  -o cmTC_60a47 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -420,15 +420,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5611d/fast"
+Run Build Command:"/usr/bin/make" "cmTC_e8fb9/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_5611d.dir/build.make CMakeFiles/cmTC_5611d.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_e8fb9.dir/build.make CMakeFiles/cmTC_e8fb9.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5611d.dir/feature_tests.cxx.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++14 -o CMakeFiles/cmTC_5611d.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5611d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5611d.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_5611d.dir/feature_tests.cxx.o  -o cmTC_5611d 
+Building CXX object CMakeFiles/cmTC_e8fb9.dir/feature_tests.cxx.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++14 -o CMakeFiles/cmTC_e8fb9.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e8fb9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8fb9.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_e8fb9.dir/feature_tests.cxx.o  -o cmTC_e8fb9 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -495,15 +495,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_508cb/fast"
+Run Build Command:"/usr/bin/make" "cmTC_98467/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_508cb.dir/build.make CMakeFiles/cmTC_508cb.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_98467.dir/build.make CMakeFiles/cmTC_98467.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_508cb.dir/feature_tests.cxx.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++11 -o CMakeFiles/cmTC_508cb.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_508cb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_508cb.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_508cb.dir/feature_tests.cxx.o  -o cmTC_508cb 
+Building CXX object CMakeFiles/cmTC_98467.dir/feature_tests.cxx.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++11 -o CMakeFiles/cmTC_98467.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_98467
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98467.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_98467.dir/feature_tests.cxx.o  -o cmTC_98467 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 
@@ -570,15 +570,15 @@ make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perf
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b3643/fast"
+Run Build Command:"/usr/bin/make" "cmTC_fb507/fast"
 make[1]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_b3643.dir/build.make CMakeFiles/cmTC_b3643.dir/build
+/usr/bin/make -f CMakeFiles/cmTC_fb507.dir/build.make CMakeFiles/cmTC_fb507.dir/build
 make[2]: Entering directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b3643.dir/feature_tests.cxx.o
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++98 -o CMakeFiles/cmTC_b3643.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b3643
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3643.dir/link.txt --verbose=1
-/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_b3643.dir/feature_tests.cxx.o  -o cmTC_b3643 
+Building CXX object CMakeFiles/cmTC_fb507.dir/feature_tests.cxx.o
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++    -std=c++98 -o CMakeFiles/cmTC_fb507.dir/feature_tests.cxx.o -c /home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fb507
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb507.dir/link.txt --verbose=1
+/home/nikita/Documents/Work/hikey970/benchmarks/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g++       -rdynamic CMakeFiles/cmTC_fb507.dir/feature_tests.cxx.o  -o cmTC_fb507 
 make[2]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory '/home/nikita/Documents/Work/hikey970/monitoring/perfcounters_csv/hikey/CMakeFiles/CMakeTmp'
 

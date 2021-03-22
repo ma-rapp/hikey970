@@ -51,13 +51,13 @@ public:
             0 // waitPeriod
         );
 
-        std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
-        std::cout << nowText << "----------------------------" << std::endl;
-        std::cout << nowText << "total values" << std::endl;
-        for (const std::shared_ptr<PerfCounter>& counter : threadPerfCounters)
-        {
-            std::cout << nowText << "tid " << counter->getThreadId() << " " << counter->getName() << ": " << counter->getCounterValue() << std::endl;
-        }
+        //std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
+        //std::cout << nowText << "----------------------------" << std::endl;
+        //std::cout << nowText << "total values" << std::endl;
+        //for (const std::shared_ptr<PerfCounter>& counter : threadPerfCounters)
+        //{
+            //std::cout << nowText << "tid " << counter->getThreadId() << " " << counter->getName() << ": " << counter->getCounterValue() << std::endl;
+        //}
     }
 
 private:
@@ -92,7 +92,7 @@ private:
         nextUpdate += epoch;
         if (untilNextUpdate.count() > 0)
         {
-            std::cout << nowText << " sleep for " << untilNextUpdate.count() << " ms" << std::endl;
+            //std::cout << nowText << " sleep for " << untilNextUpdate.count() << " ms" << std::endl;
             usleep(untilNextUpdate.count() * 1000);
         }
         else
@@ -127,7 +127,7 @@ private:
                 if(counter->getName() == "INST_RETIRED")
                 {
                     totalInstructions += (value - lastValue);
-                    if(totalInstructions >= 5000000000)
+                    if(totalInstructions >= 10000000000)
                     {
                         retVal = false;
                     }
@@ -139,13 +139,13 @@ private:
         // set csv vals and reset counter
         for(const std::string& name : counterNames)
         {
-            std::cout << std::to_string(cpu) + name << " : " << counterSumOverThreads[std::to_string(cpu) + name] << std::endl;
+            //std::cout << std::to_string(cpu) + name << " : " << counterSumOverThreads[std::to_string(cpu) + name] << std::endl;
             csv_file << counterSumOverThreads[std::to_string(cpu) + name] << ",";
             counterSumOverThreads[std::to_string(cpu) + name] = 0;
         }
-        std::cout << "totalInstructions: " << std::to_string(totalInstructions) << std::endl;
+        //std::cout << "totalInstructions: " << std::to_string(totalInstructions) << std::endl;
         csv_file << "\n";
-        std::cout << "-------------------------------------------------" << std::endl;
+        //std::cout << "-------------------------------------------------" << std::endl;
         return retVal;
     }
 
@@ -246,12 +246,11 @@ private:
             size_t new_active = e2.times[0] + e2.times[1] + e2.times[2] + e2.times[5] + 
             e2.times[6] + e2.times[7] + e2.times[8] + e2.times[9];
 
-            float active_time = last_active - new_active;
-            float idle_time = static_cast<float>(last_idle - new_idle);
-            float total_time = static_cast<float>(active_time + idle_time);
-            std::stringstream ss;
-            ss << std::fixed << std::setprecision(4) << (active_time/total_time);
-            utilvector += ss.str() + ",";
+            const float active_time = static_cast<float>(new_active - last_active);
+            const float idle_time = static_cast<float>(new_idle - last_idle);
+            const float total_time = active_time + idle_time;
+            float cpu_load = (active_time/total_time);
+            utilvector += std::to_string(cpu_load) + ",";
         }
         lastCPUData = newCPUData;
         return utilvector;
@@ -327,18 +326,18 @@ int main(int argc, char **argv)
     std::vector<std::string> counterNames;
     for (int i = 5; i < argc; i++)
     {
-    	std::cout << "measuring " << argv[i] << std::endl;
+    	//std::cout << "measuring " << argv[i] << std::endl;
         counterNames.push_back(argv[i]);
         csv_file << argv[i] << ",";
         counterSumOverThreads[std::to_string(cpu) + argv[i]] = 0;
     }
     csv_file << '\n';
 
-    PerfManager m(benchmark, cpu, counterNames, 50);
+    PerfManager m(benchmark, cpu, counterNames, 20);
     m.run();
     csv_file.close();
 
-    std::cout << currentDateTime() << "exit program" << std::endl;
+    //std::cout << currentDateTime() << "exit program" << std::endl;
 
     return 0;
 }

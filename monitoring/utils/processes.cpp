@@ -248,7 +248,7 @@ void observe(int pid, bool instruction_stopper, std::function<void(int tid)> thr
             to_be_continued = periodicCallback();
             if(!to_be_continued)
             {
-                std::cout << currentDateTime() << "reached 5,000,000,000 instructions - finishing..." << std::endl;
+                std::cout << currentDateTime() << "reached 10,000,000,000 instructions - finishing..." << std::endl;
                 return;
             }
         }
