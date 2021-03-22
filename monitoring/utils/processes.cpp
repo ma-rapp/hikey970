@@ -115,20 +115,19 @@ int findBenchmark(std::string name, int cpu)
 
     std::vector<int> alreadyRunning;
     bool firstIteration = true;
-    int cpumask [8] = {1, 2, 4, 8, 10, 20, 40, 80}
     while (true)
     {
         for (const int &pid : getRunningProcesses())
         {
             std::string processName = getProcessName(pid);
             cpu_set_t mask;
-            sched_getaffinity(pid, sizeof(cpu_set_t), &mask)
+            sched_getaffinity(pid, sizeof(cpu_set_t), &mask);
             int runningCpu = -1;
             for(int i = 0; i < 8; i++)
             {
                 if(CPU_ISSET(i, &mask) != 0)
                 {
-                    runningCpu = cpumask[i];
+                    runningCpu = i;
                 }
             }
             if (processName == name && runningCpu == cpu)

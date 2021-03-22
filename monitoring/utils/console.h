@@ -4,4 +4,4 @@
 #include <string>
 
 const std::string currentDateTime();
-const int currentDateTimeMilliseconds();
+const unsigned long long currentDateTimeMilliseconds();
