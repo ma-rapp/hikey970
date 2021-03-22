@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -19,8 +18,7 @@
 std::ofstream csv_file;
 std::string one_hot_cpu_vector;
 std::map<std::string, long long> counterSumOverThreads;
-int startTime;
-long long totalInstructions;
+unsigned long long totalInstructions;
 
 const int NUM_CPU_STATES = 10;
 typedef struct CPUData
@@ -35,10 +33,8 @@ public:
     PerfManager(std::string benchmark, int cpu, std::vector<std::string> counterNames, unsigned int epochMs) : benchmark(benchmark), cpu(cpu), counterNames(counterNames), epoch(epochMs) {}
     void run()
     {
-        startTime = currentDateTimeMilliseconds();
-
         // first wait for benchmark to start
-        int pid = findBenchmark(benchmark);
+        int pid = findBenchmark(benchmark, cpu);
         nextUpdate = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()) + epoch;
         readStatsCPU(lastCPUData);
 
@@ -51,7 +47,7 @@ public:
             0 // waitPeriod
         );
 
-        //std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
+        //std::string nowText = std::to_string(currentDateTimeMilliseconds());
         //std::cout << nowText << "----------------------------" << std::endl;
         //std::cout << nowText << "total values" << std::endl;
         //for (const std::shared_ptr<PerfCounter>& counter : threadPerfCounters)
@@ -84,7 +80,7 @@ private:
     bool periodic()
     {
         bool retVal = true;
-        std::string nowText = std::to_string(currentDateTimeMilliseconds() - startTime);
+        std::string nowText = std::to_string(currentDateTimeMilliseconds());
 
         // wait for 1 second
         std::chrono::milliseconds now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());

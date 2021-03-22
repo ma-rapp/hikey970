@@ -1,5 +1,4 @@
-#PROJECTS = perfcounters global_perfcounters temperature cci_perfcounters
-PROJECTS = perfcounters_csv
+PROJECTS = perfcounters_csv temperature
 MODULES = cci_pmu
 SHELL := /bin/bash
 
