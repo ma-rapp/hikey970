@@ -20,7 +20,7 @@ public:
     void run()
     {
         startTime = currentDateTimeMilliseconds();
-        std::cout << std::to_string(startTime) << "start temperature monitoring" << std::endl;
+        //std::cout << std::to_string(startTime) << "start temperature monitoring" << std::endl;
 
         nextUpdate = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()) + epoch;
 
@@ -49,7 +49,7 @@ private:
         }
         else
         {
-            std::cout << std::to_string(nowTime) << "late" << std::endl;
+            std::cout << std::to_string(nowTime) << " late" << std::endl;
         }
         
         int t = getCurrentTemperature();
@@ -123,7 +123,7 @@ int main(int argc, char **argv)
     m.run();
     csv_file.close();
 
-    std::cout << currentDateTimeMilliseconds() << "exit program" << std::endl;
+    //std::cout << currentDateTimeMilliseconds() << "exit program" << std::endl;
 
     return 0;
 }

@@ -111,7 +111,7 @@ std::vector<int> getThreads(int pid)
 
 int findBenchmark(std::string name, int cpu)
 {
-    std::cout << currentDateTime() << "waiting for next occurence of benchmark " << name << std::endl;
+    //std::cout << currentDateTime() << "waiting for next occurence of benchmark " << name << std::endl;
 
     std::vector<int> alreadyRunning;
     bool firstIteration = true;
@@ -134,10 +134,10 @@ int findBenchmark(std::string name, int cpu)
             {
                 if (firstIteration) {
                     alreadyRunning.push_back(pid);
-                    std::cout << currentDateTime() << "skipped process " << pid << " (already running)" << std::endl;
+                    //std::cout << currentDateTime() << "skipped process " << pid << " (already running)" << std::endl;
                 } else {
                     if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
-                        std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
+                        //std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
                         return pid;
                     }
                 }
@@ -232,7 +232,7 @@ void observe(int pid, bool instruction_stopper, std::function<void(int tid)> thr
             if (std::find(tids.begin(), tids.end(), threadIds.at(i)) == tids.end())
             {
                 // remove finished threads
-                std::cout << currentDateTime() << "thread " << threadIds.at(i) << " finished" << std::endl;
+                //std::cout << currentDateTime() << "thread " << threadIds.at(i) << " finished" << std::endl;
                 threadEnded(threadIds.at(i));
                 threadIds.erase(threadIds.begin() + i);
             }
@@ -242,7 +242,7 @@ void observe(int pid, bool instruction_stopper, std::function<void(int tid)> thr
             if (std::find(threadIds.begin(), threadIds.end(), tid) == threadIds.end())
             {
                 // migrate new task
-                std::cout << currentDateTime() << "thread " << tid << " spawned" << std::endl;
+                //std::cout << currentDateTime() << "thread " << tid << " spawned" << std::endl;
                 threadStarted(tid);
                 threadIds.push_back(tid);
             }
@@ -250,7 +250,7 @@ void observe(int pid, bool instruction_stopper, std::function<void(int tid)> thr
 
         if (threadIds.size() == 0)
         {
-            std::cout << currentDateTime() << "last thread finished" << std::endl;
+            //std::cout << currentDateTime() << "last thread finished" << std::endl;
             return;
         }
 
@@ -259,7 +259,7 @@ void observe(int pid, bool instruction_stopper, std::function<void(int tid)> thr
             to_be_continued = periodicCallback();
             if(!to_be_continued)
             {
-                std::cout << currentDateTime() << "reached 10,000,000,000 instructions - finishing..." << std::endl;
+                //std::cout << currentDateTime() << "reached 10,000,000,000 instructions - finishing..." << std::endl;
                 return;
             }
         }

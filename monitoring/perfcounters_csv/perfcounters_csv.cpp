@@ -93,7 +93,7 @@ private:
         }
         else
         {
-            std::cout << nowText << "late" << std::endl;
+            std::cout << nowText << " late" << std::endl;
         }
         // time, temperature,
         csv_file << nowText << ",";
