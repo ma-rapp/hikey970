@@ -116,7 +116,7 @@ int main(int argc, char **argv)
 
     std::string filename = "extratemp_scenario" + scenario + "_benchmark-" + benchmark + "_core" + std::to_string(cpu) + "_frequency" + cpufreq + ".csv";
     csv_file.open(filename);
-    csv_file << "time, temperature\n";
+    csv_file << "time,temperature\n";
 
 
     TempManager m(20, 10000);
