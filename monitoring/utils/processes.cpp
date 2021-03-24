@@ -120,25 +120,29 @@ int findBenchmark(std::string name, int cpu)
         for (const int &pid : getRunningProcesses())
         {
             std::string processName = getProcessName(pid);
-            cpu_set_t mask;
-            sched_getaffinity(pid, sizeof(cpu_set_t), &mask);
-            int runningCpu = -1;
-            for(int i = 0; i < 8; i++)
-            {
-                if(CPU_ISSET(i, &mask) != 0)
-                {
-                    runningCpu = i;
-                }
-            }
-            if (processName == name && runningCpu == cpu)
+            if (processName == name)
             {
                 if (firstIteration) {
                     alreadyRunning.push_back(pid);
-                    //std::cout << currentDateTime() << "skipped process " << pid << " (already running)" << std::endl;
+                    std::cout << currentDateTime() << "skipped process " << pid << " (already running)" << std::endl;
                 } else {
-                    if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
-                        //std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
-                        return pid;
+                    cpu_set_t mask;
+                    sched_getaffinity(pid, sizeof(cpu_set_t), &mask);
+                    int runningCpu = -1;
+                    for(int i = 0; i < 8; i++)
+                    {
+                        if(CPU_ISSET(i, &mask) != 0)
+                        {
+                            runningCpu = i;
+                        }
+                    }
+                    if(runningCpu == cpu){
+                        if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
+                            //std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
+                            return pid;
+                        }
+                    } else {
+                        std::cout << "Was looking for CPU [" << std::to_string(cpu) << "] but got CPU [" << std::to_string(runningCpu) << "]." << std::endl;
                     }
                 }
             }
