@@ -104,7 +104,7 @@ private:
             if (counter->isActive())
             {
                 //std::cout << nowText << " cpu(" << counter->getCPUId()  << ") tid(" << counter->getThreadId() << ") " << counter->getName() << ": " << (value - lastValue) << std::endl;
-                counterSumOverThreads[std::to_string(counter->getCPUId()) + counter->getName()] += (value - lastValue);
+                counterSumOverThreads[counter->getName()] += (value - lastValue);
             }
             lastValues.at(i) = value;
         }
@@ -113,8 +113,8 @@ private:
         for(const std::string& name : counterNames)
         {
             //std::cout << std::to_string(cpu) + name << " : " << counterSumOverThreads[std::to_string(cpu) + name] << std::endl;
-            csv_file << counterSumOverThreads[std::to_string(cpu) + name] << ",";
-            counterSumOverThreads[std::to_string(cpu) + name] = 0;
+            csv_file << counterSumOverThreads[name] << ",";
+            counterSumOverThreads[name] = 0;
         }
         //std::cout << "totalInstructions: " << std::to_string(totalInstructions) << std::endl;
         csv_file << "\n";
@@ -139,14 +139,14 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::string benchmark = argv[0];
+    std::string benchmark = argv[1];
 
 
     std::string filename = "migration_overhead_test.csv";
     csv_file.open(filename);
     csv_file << "time,";
     std::vector<std::string> counterNames;
-    for (int i = 1; i < argc; i++)
+    for (int i = 2; i < argc; i++)
     {
     	//std::cout << "measuring " << argv[i] << std::endl;
         counterNames.push_back(argv[i]);

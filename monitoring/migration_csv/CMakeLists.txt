@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
-project (perfcounters_csv)
-add_executable(perfcounters_csv perfcounters_csv.cpp ../utils/processes.cpp ../utils/console.cpp ../utils/perf.cpp)
+project (migration_csv)
+add_executable(migration_csv migration_csv.cpp ../utils/processes.cpp ../utils/console.cpp ../utils/perf.cpp)
 
 SET(GCC_COMPILE_FLAGS "-static -std=c++11 -Wall -Werror -O3")
 SET(GCC_LINK_FLAGS    "")
