@@ -98,7 +98,6 @@ private:
         // time, temperature,
         csv_file << nowText << ",";
         csv_file << std::to_string(getCurrentTemperature()) << ",";
-        csv_file << std::to_string(getCurrentFrequency(cpu)) << ",";
         csv_file << one_hot_cpu_vector << ",";
         csv_file << getCurrentUtilization();
 
@@ -266,16 +265,17 @@ private:
 int main(int argc, char **argv)
 {
     // ./percounters_csv <cpufreq> <benchmark> <cpu> <counter1> <counter2> ... <counterN>
-    if (argc < 3)
+    if (argc < 7)
     {
         //std::cerr << "first argument must be benchmark name or '?'" << std::endl;
-        std::cerr << "call must be like ./perfcounters_csv <cpufreq> <benchmark> <cpu> <scenario> <counter1> <counter2> ... <counterN>";
+        std::cerr << "call must be like ./perfcounters_csv <cpufreq_little> <cpufreq_big> <benchmark> <cpu> <scenario> <counter1> <counter2> ... <counterN>";
         return 1;
     }
 
-    std::string cpufreq = argv[1];
-    std::string benchmark = argv[2];
-    int cpu = atoi(argv[3]);
+    std::string cpufreq_little = argv[1];
+    std::string cpufreq_big = argv[2]
+    std::string benchmark = argv[3];
+    int cpu = atoi(argv[4]);
     switch(cpu){
         case 1: 
             cpu = 0;
@@ -311,17 +311,17 @@ int main(int argc, char **argv)
             break;
         default: std::cout << "error with cpu arg";
     }
-    std::string scenario_file = argv[4];
+    std::string scenario_file = argv[5];
     std::string scenario = std::regex_replace(scenario_file, std::regex("[^0-9]*([0-9]+).*"), std::string("$1"));
 
 
-    std::string filename = "scenario" + scenario + "_benchmark-" + benchmark + "_core" + std::to_string(cpu) + "_frequency" + cpufreq + ".csv";
+    std::string filename = "scenario" + scenario + "_benchmark-" + benchmark + "_core" + std::to_string(cpu) + "_frequencyl" + cpufreq_little + "_frequencyH" + cpufreq_big + ".csv";
     csv_file.open(filename);
-    csv_file << "time,temperature,f_gov,";
+    csv_file << "time,temperature,";
     csv_file << "curr_cpu0,curr_cpu1,curr_cpu2,curr_cpu3,curr_cpu4,curr_cpu5,curr_cpu6,curr_cpu7,";
     csv_file << "core_util0,core_util1,core_util2,core_util3,core_util4,core_util5,core_util6,core_util7,";
     std::vector<std::string> counterNames;
-    for (int i = 5; i < argc; i++)
+    for (int i = 6; i < argc; i++)
     {
     	//std::cout << "measuring " << argv[i] << std::endl;
         counterNames.push_back(argv[i]);
