@@ -136,7 +136,7 @@ int findBenchmark(std::string name, int cpu)
                             runningCpu = i;
                         }
                     }
-                    if(runningCpu == cpu){
+                    if(cpu == -1 || runningCpu == cpu){
                         if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
                             //std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
                             return pid;
