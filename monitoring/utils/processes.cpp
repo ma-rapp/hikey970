@@ -136,14 +136,14 @@ int findBenchmark(std::string name, int cpu)
                             runningCpu = i;
                         }
                     }
-                    if(cpu == -1 || runningCpu == cpu){
-                        if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
+                    if (std::find(alreadyRunning.begin(), alreadyRunning.end(), pid) == alreadyRunning.end()) {
+                        if(cpu == -1 || runningCpu == cpu) {
                             //std::cout << currentDateTime() << "locked to pid " << pid << " (" << getProcessName(pid) << ")" << std::endl;
                             return pid;
+                        } else {
+                            std::cout << "Was looking for CPU [" << std::to_string(cpu) << "] but got CPU [" << std::to_string(runningCpu) << "]." << std::endl;
                         }
-                    } else {
-                        std::cout << "Was looking for CPU [" << std::to_string(cpu) << "] but got CPU [" << std::to_string(runningCpu) << "]." << std::endl;
-                    }
+                    } 
                 }
             }
         }
