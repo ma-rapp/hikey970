@@ -273,7 +273,7 @@ int main(int argc, char **argv)
     }
 
     std::string cpufreq_little = argv[1];
-    std::string cpufreq_big = argv[2]
+    std::string cpufreq_big = argv[2];
     std::string benchmark = argv[3];
     int cpu = atoi(argv[4]);
     switch(cpu){

@@ -1,4 +1,4 @@
-PROJECTS = perfcounters_csv migration_csv
+PROJECTS = perfcounters_csv
 MODULES = cci_pmu
 SHELL := /bin/bash
 
