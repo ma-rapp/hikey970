@@ -132,17 +132,18 @@ private:
 int main(int argc, char **argv)
 {
     // ./percounters_csv <cpufreq> <benchmark> <cpu> <counter1> <counter2> ... <counterN>
-    if (argc < 3)
+    if (argc < 4)
     {
         //std::cerr << "first argument must be benchmark name or '?'" << std::endl;
-        std::cerr << "call must be like ./perfcounters_csv <benchmark> <counter1> <counter2> ... <counterN>";
+        std::cerr << "call must be like ./perfcounters_csv <benchmark> <cpu> <counter1> <counter2> ... <counterN>";
         return 1;
     }
 
     std::string benchmark = argv[1];
+    std::string cpu = argv[2];
 
 
-    std::string filename = "migration_overhead_test.csv";
+    std::string filename = "migration_overhead" + cpu + "_test.csv";
     csv_file.open(filename);
     csv_file << "time,";
     std::vector<std::string> counterNames;
