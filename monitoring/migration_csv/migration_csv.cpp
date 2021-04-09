@@ -147,7 +147,7 @@ int main(int argc, char **argv)
     csv_file.open(filename);
     csv_file << "time,";
     std::vector<std::string> counterNames;
-    for (int i = 2; i < argc; i++)
+    for (int i = 3; i < argc; i++)
     {
     	//std::cout << "measuring " << argv[i] << std::endl;
         counterNames.push_back(argv[i]);

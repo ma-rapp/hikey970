@@ -61,9 +61,16 @@ private:
     {
         for (const std::string& name : counterNames)
         {
-            std::shared_ptr<PerfCounter> counter = std::make_shared<PerfCounter>(tid, cpu, name);
-            counter->setUp();
-            threadPerfCounters.push_back(counter);
+            if(name.find("CPU_CYCLES") != std::string::npos){
+                //std::cout << "setting up CPU_CYCLES for " << name[0] - '0' << std::endl;
+                std::shared_ptr<PerfCounter> counter = std::make_shared<PerfCounter>(-1, name[0] - '0', "CPU_CYCLES");
+                counter->setUp();
+                threadPerfCounters.push_back(counter);
+            } else {
+                std::shared_ptr<PerfCounter> counter = std::make_shared<PerfCounter>(tid, cpu, name);
+                counter->setUp();
+                threadPerfCounters.push_back(counter);
+            }
         }
     }
 
@@ -135,9 +142,15 @@ private:
         // set csv vals and reset counter
         for(const std::string& name : counterNames)
         {
+            if(name.find("CPU_CYCLES") != std::string::npos)
+            {
+                csv_file << counterSumOverThreads[std::to_string(name[0] - '0') + "CPU_CYCLES"] << ",";
+                counterSumOverThreads[std::to_string(name[0] - '0') + "CPU_CYCLES"] = 0;
+            } else {
+                csv_file << counterSumOverThreads[std::to_string(cpu) + name] << ",";
+                counterSumOverThreads[std::to_string(cpu) + name] = 0;
+            }
             //std::cout << std::to_string(cpu) + name << " : " << counterSumOverThreads[std::to_string(cpu) + name] << std::endl;
-            csv_file << counterSumOverThreads[std::to_string(cpu) + name] << ",";
-            counterSumOverThreads[std::to_string(cpu) + name] = 0;
         }
         //std::cout << "totalInstructions: " << std::to_string(totalInstructions) << std::endl;
         csv_file << "\n";
@@ -324,9 +337,20 @@ int main(int argc, char **argv)
     for (int i = 6; i < argc; i++)
     {
     	//std::cout << "measuring " << argv[i] << std::endl;
-        counterNames.push_back(argv[i]);
-        csv_file << argv[i] << ",";
-        counterSumOverThreads[std::to_string(cpu) + argv[i]] = 0;
+        if(strcmp("CPU_CYCLES", argv[i]) == 0)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                counterNames.push_back(std::to_string(j) + argv[i]);
+                csv_file << "cpu" << std::to_string(j) << argv[i] << ",";
+                counterSumOverThreads[std::to_string(j) + argv[i]] = 0;
+            }
+        }
+        else {
+            counterNames.push_back(argv[i]);
+            csv_file << argv[i] << ",";
+            counterSumOverThreads[std::to_string(cpu) + argv[i]] = 0;
+        }
     }
     csv_file << '\n';
 
