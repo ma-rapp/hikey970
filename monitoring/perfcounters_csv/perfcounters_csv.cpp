@@ -33,6 +33,7 @@ public:
     PerfManager(std::string benchmark, int cpu, std::vector<std::string> counterNames, unsigned int epochMs) : benchmark(benchmark), cpu(cpu), counterNames(counterNames), epoch(epochMs) {}
     void run()
     {
+        initialTemperatureRecording();
         // first wait for benchmark to start
         int pid = findBenchmark(benchmark, cpu);
         nextUpdate = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()) + epoch;
@@ -156,6 +157,20 @@ private:
         csv_file << "\n";
         //std::cout << "-------------------------------------------------" << std::endl;
         return retVal;
+    }
+
+    void initialTemperatureRecording()
+    {
+        std::string nowText = std::to_string(currentDateTimeMilliseconds());
+        csv_file << nowText << ",";
+        csv_file << std::to_string(getCurrentTemperature()) << ",";
+        csv_file << one_hot_cpu_vector << ",";
+        csv_file << getCurrentUtilization();
+        for(const std::string& name : counterNames)
+        {
+            csv_file << "0" << ",";
+        }
+        csv_file << "\n";
     }
 
     int getCurrentFrequency(int cpu_num)
