@@ -165,10 +165,10 @@ private:
         csv_file << nowText << ",";
         csv_file << std::to_string(getCurrentTemperature()) << ",";
         csv_file << one_hot_cpu_vector << ",";
-        csv_file << getCurrentUtilization();
-        for(const std::string& name : counterNames)
+        csv_file << "0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,";
+        for(unsigned int i = 0; i < counterNames.size(); i++)
         {
-            csv_file << "0" << ",";
+            csv_file << "0,";
         }
         csv_file << "\n";
     }
